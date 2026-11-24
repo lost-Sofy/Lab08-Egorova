@@ -1,169 +1,200 @@
-﻿// // int lessonNumber = 1;
-// // int totalLessons = 5;
+﻿// // // int lessonNumber = 1;
+// // // int totalLessons = 5;
 
-// // while (lessonNumber <= totalLessons) {
-// //     Console.WriteLine($"Пара {totalLessons}");
-// //     totalLessons--;
-// // }
+// // // while (lessonNumber <= totalLessons) {
+// // //     Console.WriteLine($"Пара {totalLessons}");
+// // //     totalLessons--;
+// // // }
 
-// // Console.WriteLine("Пары закончились");
+// // // Console.WriteLine("Пары закончились");
 
-// // Console.WriteLine();
-// // Console.WriteLine("Вводите оценки по одной, для завершения введите -1");
-// // int grade = int.Parse(Console.ReadLine());
+// // // Console.WriteLine();
+// // // Console.WriteLine("Вводите оценки по одной, для завершения введите -1");
+// // // int grade = int.Parse(Console.ReadLine());
+// // // int sum = 0;
+
+// // // while (grade != -1)
+// // // {
+// // //     Console.WriteLine($"Оценка принята {grade}");
+// // //     grade = int.Parse(Console.ReadLine());
+// // //     sum++;
+// // // }
+
+// // // Console.WriteLine($"Количество оценок: {sum}");
+// // // Console.WriteLine("Ввод завершен");
+
+// // using System.Diagnostics;
+
 // // int sum = 0;
+// // int count = 0;
+
+// // Console.WriteLine("Вводите оценки, для завершения введите -1");
+// // int grade = int.Parse(Console.ReadLine());
+// // int max = 0;
 
 // // while (grade != -1)
 // // {
-// //     Console.WriteLine($"Оценка принята {grade}");
+// //     if (max <= grade)
+// //     {
+// //         max = grade;
+// //     }
+// //     sum += grade;
+// //     count++;
 // //     grade = int.Parse(Console.ReadLine());
+// // }
+
+// // if (count > 0)
+// // {
+// //     Console.WriteLine($"Средний балл {(double)sum / count}");
+// //     Console.WriteLine($"Наибольшая оценка: {max}");
+// // }
+// // else
+// // {
+// //     Console.WriteLine("Оценок не было введено");
+// // }
+
+// // Console.WriteLine();
+// // string correctPassword = "qwerty123";
+// // int sum = 0;
+
+// // while (true)
+// // {
+// //     Console.WriteLine("Введите пароль от личного кабинета");
+// //     string password = Console.ReadLine();
+
+// //     if (password == correctPassword)
+// //     {
+// //         Console.WriteLine("Доступ разрешен");
+// //         Console.WriteLine($"Количество неверных попыток: {sum}");
+// //         break;
+// //     }
+// //     Console.WriteLine("Неверный пароль, попробуйте снова");
 // //     sum++;
 // // }
 
-// // Console.WriteLine($"Количество оценок: {sum}");
-// // Console.WriteLine("Ввод завершен");
+// string answer;
 
-// using System.Diagnostics;
-
-// int sum = 0;
-// int count = 0;
-
-// Console.WriteLine("Вводите оценки, для завершения введите -1");
-// int grade = int.Parse(Console.ReadLine());
-// int max = 0;
-
-// while (grade != -1)
+// do
 // {
-//     if (max <= grade)
-//     {
-//         max = grade;
-//     }
-//     sum += grade;
-//     count++;
-//     grade = int.Parse(Console.ReadLine());
-// }
+//     Console.WriteLine("Введите дату посещения (например, 01.09): ");
+//     string date = Console.ReadLine();
+//     Console.WriteLine($"Запись добавлена: {date}");
 
-// if (count > 0)
-// {
-//     Console.WriteLine($"Средний балл {(double)sum / count}");
-//     Console.WriteLine($"Наибольшая оценка: {max}");
-// }
-// else
-// {
-//     Console.WriteLine("Оценок не было введено");
-// }
+//     Console.WriteLine("Добавить ещё одну запись? (да/нет): ");
+//     answer = Console.ReadLine();
 
+// } while (answer == "да");
+
+// Console.WriteLine("Дневник сохранён");
+
+// // Вариант А
 // Console.WriteLine();
-// string correctPassword = "qwerty123";
+// int N = 8;
+// int count = 1;
+
+// while (count < 11)
+// {
+//     Console.WriteLine($"{N} * {count} = {N * count}");
+//     count++;
+// }
+
+// // Вариант Б
+// Console.WriteLine();
+// Console.WriteLine("Введите имя ученика, для завершения введите конец");
+// string word = Console.ReadLine();
 // int sum = 0;
 
-// while (true)
+// while (word != "конец")
 // {
-//     Console.WriteLine("Введите пароль от личного кабинета");
-//     string password = Console.ReadLine();
-
-//     if (password == correctPassword)
-//     {
-//         Console.WriteLine("Доступ разрешен");
-//         Console.WriteLine($"Количество неверных попыток: {sum}");
-//         break;
-//     }
-//     Console.WriteLine("Неверный пароль, попробуйте снова");
+//     Console.Write($"Введите имя ученика: ");
+//     word = Console.ReadLine();
 //     sum++;
 // }
 
-string answer;
+// Console.WriteLine($"Имен учеников: {sum}");
 
-do
-{
-    Console.WriteLine("Введите дату посещения (например, 01.09): ");
-    string date = Console.ReadLine();
-    Console.WriteLine($"Запись добавлена: {date}");
+// // // Распределитель вариантов
+// // Console.WriteLine();
+// // Console.Write("Введите свою фамилию: ");
+// // string surname = Console.ReadLine()!.Trim();
 
-    Console.WriteLine("Добавить ещё одну запись? (да/нет): ");
-    answer = Console.ReadLine();
+// // if (string.IsNullOrEmpty(surname)) {
+// //     Console.WriteLine("Фамилия не введена. Завершение работы.");
+// //     return;
+// // }
 
-} while (answer == "да");
+// // Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
 
-Console.WriteLine("Дневник сохранён");
+// // var assigned = Enumerable.Range(1, 10)
+// //     .OrderBy(_ => rnd.Next())
+// //     .Take(2)
+// //     .OrderBy(x => x)
+// //     .ToList();
 
-// Вариант А
-Console.WriteLine();
-int N = 8;
-int count = 1;
+// // Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
-while (count < 11)
-{
-    Console.WriteLine($"{N} * {count} = {N * count}");
-    count++;
-}
-
-// Вариант Б
-Console.WriteLine();
-Console.WriteLine("Введите имя ученика, для завершения введите конец");
-string word = Console.ReadLine();
-int sum = 0;
-
-while (word != "конец")
-{
-    Console.Write($"Введите имя ученика: ");
-    word = Console.ReadLine();
-    sum++;
-}
-
-Console.WriteLine($"Имен учеников: {sum}");
-
-// // Распределитель вариантов
+// // Вариант 5
 // Console.WriteLine();
-// Console.Write("Введите свою фамилию: ");
-// string surname = Console.ReadLine()!.Trim();
+// string correctPassword = "halo";
+// string password;
 
-// if (string.IsNullOrEmpty(surname)) {
-//     Console.WriteLine("Фамилия не введена. Завершение работы.");
-//     return;
+// while (true)
+// {
+//     Console.Write("Введите пароль: ");
+//     password = Console.ReadLine();
+
+//     if (password == correctPassword)
+//     {
+//         Console.WriteLine("Дверь открыта");
+//         break;
+//     }
+//     else
+//     {
+//         Console.WriteLine("Пароль неверный, попробуйте еще раз");
+//     }
 // }
 
-// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// // Вариант 6
+// Console.WriteLine();
+// Console.WriteLine("Введите целое положительное число: ");
+// int number = int.Parse(Console.ReadLine());
+// int count = 0;
 
-// var assigned = Enumerable.Range(1, 10)
-//     .OrderBy(_ => rnd.Next())
-//     .Take(2)
-//     .OrderBy(x => x)
-//     .ToList();
+// while (number != 0)
+// {
+//     number /= 10;
+//     count++;
+// }
 
-// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+// Console.WriteLine($"Цифр в числе: {count}");
 
-// Вариант 5
-Console.WriteLine();
-string correctPassword = "halo";
+// Дополнительное задание банкомат
+int count = 0;
+string correctPassword = "qwe123";
 string password;
+int money = 0;
+int sum = 0;
 
-while (true)
+
+while (count < 3)
 {
-    Console.Write("Введите пароль: ");
+    Console.Write("Введите код: ");
     password = Console.ReadLine();
+    count++;
 
     if (password == correctPassword)
     {
-        Console.WriteLine("Дверь открыта");
-        break;
+        Console.WriteLine("Введите сумму снятия, для завершения операции введите 0: ");
+        do
+        {
+            money = int.Parse(Console.ReadLine());
+            sum += money;
+        } while (money != 0);
+
+        Console.WriteLine($"Итоговая снятая сумма: {sum}");
+        return;
     }
-    else
-    {
-        Console.WriteLine("Пароль неверный, попробуйте еще раз");
-    }
+
 }
 
-// Вариант 6
-Console.WriteLine();
-Console.WriteLine("Введите целое положительное число: ");
-int number = int.Parse(Console.ReadLine());
-int count = 0;
-
-while (number != 0)
-{
-    number /= 10;
-    count++;
-}
-
-Console.WriteLine($"Цифр в числе: {count}");
+Console.WriteLine("Карта заблокирована");
